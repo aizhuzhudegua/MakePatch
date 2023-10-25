@@ -116,14 +116,14 @@ RESOURCES += \
 
 unix: {
 
-target.path = /usr/bin/
+target.path = /opt/apps/io.github.A-Photo-Tool-Libre/files/bin
 INSTALLS += target
 
 unix_man.path = /usr/share/man/man1
 unix_man.files = ../debian/aphototoollibre.1.gz
 INSTALLS += unix_man
 
-unix_desktop.path = /usr/share/applications
+unix_desktop.path = /opt/apps/io.github.A-Photo-Tool-Libre/files/share/applications
 unix_desktop.files = ../desktop/aphototoollibre.desktop
 INSTALLS += unix_desktop
 
