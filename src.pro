@@ -4,7 +4,7 @@ qtHaveModule(printsupport): QT += printsupport
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
-# For use with Qt 6
+# For use with Qt 6  
 # CONFIG += c++11
 
 TARGET = aphototoollibre
