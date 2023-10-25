@@ -14,6 +14,7 @@ CONFIG += warn_on
 # TRANSLATIONS = i18n/aphototoollibre_en_US.ts
 # RESOURCES = i18n/aphototoollibre_en_US.qm
 
+PREFIX = $$[PREFIX]
 DESTDIR = ../bin
 MOC_DIR = ../build/moc
 RCC_DIR = ../build/rcc
@@ -116,22 +117,22 @@ RESOURCES += \
 
 unix: {
 
-target.path = /opt/apps/io.github.A-Photo-Tool-Libre/files/bin
+target.path = $$PREFIX/files/bin
 INSTALLS += target
 
-unix_man.path = /usr/share/man/man1
+unix_man.path = $$PREFIX/share/man/man1
 unix_man.files = ../debian/aphototoollibre.1.gz
 INSTALLS += unix_man
 
-unix_desktop.path = /opt/apps/io.github.A-Photo-Tool-Libre/files/share/applications
+unix_desktop.path = $$PREFIX/share/applications
 unix_desktop.files = ../desktop/aphototoollibre.desktop
 INSTALLS += unix_desktop
 
-unix_icons.path = /usr/share/icons/hicolor/scalable/apps
+unix_icons.path = $$PREFIX/share/icons/hicolor/scalable/apps
 unix_icons.files = ../desktop/aphototoollibre.svg
 INSTALLS += unix_icons
 
-unix_metainfo.path = /usr/share/metainfo
+unix_metainfo.path = $$PREFIX/share/metainfo
 unix_metainfo.files = ../desktop/aphototoollibre.metainfo.xml
 INSTALLS += unix_metainfo
 
